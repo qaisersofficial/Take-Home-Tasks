@@ -75,7 +75,7 @@ const CreateTaskPage = () => {
             onClick={() => navigate('/')}
             className="flex items-center space-x-2 text-gray-300 hover:text-white mt-20 mb-8 transition-colors"
           >
-            <ArrowLeft size={20} />
+            <ArrowLeft size={20} className='hover:text-gray-400' />
           </button>
 
           {/* Form */}

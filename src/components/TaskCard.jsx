@@ -2,27 +2,27 @@ import { Check, Trash2 } from 'lucide-react'
 
 const TaskCard = ({ task, onToggleComplete, onDelete, onClick }) => {
   const colorClasses = {
-    red: 'bg-red-500 border-red-500',
-    orange: 'bg-orange-500 border-orange-500',
-    yellow: 'bg-yellow-500 border-yellow-500',
-    green: 'bg-green-500 border-green-500',
-    blue: 'bg-blue-500 border-blue-500',
-    indigo: 'bg-indigo-500 border-indigo-500',
-    purple: 'bg-purple-500 border-purple-500',
-    pink: 'bg-pink-500 border-pink-500',
-    brown: 'bg-amber-700 border-amber-700'
+    red: 'bg-[#FF3B30] border-[#FF3B30]',
+    orange: 'bg-[#FF9500] border-[#FF9500]',
+    yellow: 'bg-[#FFCC00] border-[#FFCC00]',
+    green: 'bg-[#34C759] border-[#34C759]',
+    blue: 'bg-[#007AFF] border-[#007AFF]',
+    indigo: 'bg-[#5856D6] border-[#5856D6]',
+    purple: 'bg-[#AF52DE] border-[#AF52DE]',
+    pink: 'bg-[#FF2D55] border-[#FF2D55]',
+    brown: 'bg-[#A2845E] border-[#A2845E]'
   }
 
   const hoverColorClasses = {
-    red: 'hover:border-red-400',
-    orange: 'hover:border-orange-400',
-    yellow: 'hover:border-yellow-400',
-    green: 'hover:border-green-400',
-    blue: 'hover:border-blue-400',
+    red: 'hover:border-[#FF3B30]',
+    orange: 'hover:border-[#FF9500]',
+    yellow: 'hover:border-[#FFCC00]',
+    green: 'hover:border-[#5856D6]',
+    blue: 'hover:border-[#007AFF]',
     indigo: 'hover:border-indigo-400',
-    purple: 'hover:border-purple-400',
-    pink: 'hover:border-pink-400',
-    brown: 'hover:border-amber-600'
+    purple: 'hover:border-[#AF52DE]',
+    pink: 'hover:border-[#FF2D55]',
+    brown: 'hover:border-[#A2845E]'
   }
 
   const handleToggleComplete = (e) => {
@@ -39,7 +39,7 @@ const TaskCard = ({ task, onToggleComplete, onDelete, onClick }) => {
 
   return (
     <div 
-      className="bg-gray-800 rounded-lg p-4 cursor-pointer hover:bg-gray-750 transition-colors"
+      className="bg-[#262626] border-2 border-[#333333] rounded-lg p-4 cursor-pointer hover:bg-[#0000000F] transition-colors"
       onClick={() => onClick(task.id)}
     >
       <div className="flex items-center justify-between">
@@ -48,8 +48,8 @@ const TaskCard = ({ task, onToggleComplete, onDelete, onClick }) => {
             onClick={handleToggleComplete}
             className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
               task.completed 
-                ? `${colorClasses[task.color] || 'bg-blue-500 border-blue-500'} text-white` 
-                : `border-gray-400 ${hoverColorClasses[task.color] || 'hover:border-blue-400'}`
+                ? `${colorClasses[task.color] || ' border-blue-500'} text-white` 
+                : `border-[#4EA8DE] ${hoverColorClasses[task.color] || 'hover:border-blue-400'}`
             }`}
           >
             {task.completed && <Check size={14} />}
