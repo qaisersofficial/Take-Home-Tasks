@@ -6,7 +6,7 @@ import ColorPicker from '../components/ColorPicker'
 
 const CreateTaskPage = () => {
   const [title, setTitle] = useState('')
-  const [color, setColor] = useState('blue')
+  const [color, setColor] = useState('')
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
   const isFormComplete = title.trim() && color
