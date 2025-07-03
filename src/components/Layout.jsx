@@ -1,4 +1,4 @@
-import Logo from './Layout'
+import Logo from './Logo'
 
 const Layout = ({ children, showHeader = true }) => {
   return (
