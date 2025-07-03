@@ -17,9 +17,9 @@ const TaskCard = ({ task, onToggleComplete, onDelete, onClick }) => {
     red: 'hover:border-[#FF3B30]',
     orange: 'hover:border-[#FF9500]',
     yellow: 'hover:border-[#FFCC00]',
-    green: 'hover:border-[#5856D6]',
+    green: 'hover:border-[#34C759]',
     blue: 'hover:border-[#007AFF]',
-    indigo: 'hover:border-indigo-400',
+    indigo: 'hover:border-[#5856D6]',
     purple: 'hover:border-[#AF52DE]',
     pink: 'hover:border-[#FF2D55]',
     brown: 'hover:border-[#A2845E]'
@@ -48,8 +48,8 @@ const TaskCard = ({ task, onToggleComplete, onDelete, onClick }) => {
             onClick={handleToggleComplete}
             className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
               task.completed 
-                ? `${colorClasses[task.color] || ' border-blue-500'} text-white` 
-                : `border-[#4EA8DE] ${hoverColorClasses[task.color] || 'hover:border-blue-400'}`
+                ? `${colorClasses[task.color] || 'bg-[#007AFF] border-[#007AFF]'} text-white` 
+                : `border-[#4EA8DE] ${hoverColorClasses[task.color] || 'hover:border-[#007AFF]'}`
             }`}
           >
             {task.completed && <Check size={14} />}
