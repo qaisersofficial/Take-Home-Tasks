@@ -4,17 +4,14 @@ import CreateTaskPage from './pages/CreateTaskPage'
 import EditTaskPage from './pages/EditTaskPage'
 
 function App() {
-
   return (
-    <>
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreateTaskPage />} />
         <Route path="/edit/:id" element={<EditTaskPage />} />
       </Routes>
-    </Router> 
-    </>
+    </Router>
   )
 }
 
